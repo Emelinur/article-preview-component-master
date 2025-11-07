@@ -21,6 +21,8 @@
   --fs-text-3: 0.8125rem;
   --lh-text-3: 1.4;
   --ls-text-3: 0.25rem;
+  --fw-1: 500;
+  --fw-2: 700;
 
   /* Spacing */
   --spacing-2000: 10rem;
@@ -34,13 +36,35 @@
   --spacing-200: 1rem;
   --spacing-0: 0;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+main{
   display: flex;
   justify-content: center;
   align-items: center;
+ flex:1;
+}
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "card-img card-content";
+  gap: var(--spacing-500);
+}
+
+.card-img{
+  grid-area: card-img;
+}
+.card-contend{
+   grid-area: card-content;
 }
