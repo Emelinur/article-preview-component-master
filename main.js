@@ -1,10 +1,8 @@
-let btn_share = document.querySelector("#btn_share");
-let share_popover = document.querySelector(".share-popover");
+const btnShare = document.querySelector('#btn_share');
+const card = document.querySelector('.card');
+const share_popover=document.querySelector(".share-popover")
 
-btn_share.addEventListener("click", () => {
-  if (share_popover.style.display === "flex") {
-    share_popover.style.display = "none";
-  } else {
-    share_popover.style.display = "flex";
-  }
+btnShare.addEventListener('click', () => {
+  card.classList.toggle('card--share-open');
+share_popover.classList.add('share-btn--popup')
 });
